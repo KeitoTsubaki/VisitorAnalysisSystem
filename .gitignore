@@ -1,0 +1,15 @@
+# Python
+__pycache__/
+*.pyc
+
+# License plate photos and anything derived from them (kept locally only)
+images/*
+!images/output_images/
+images/output_images/*
+!images/output_images/.gitkeep
+training/runs/
+outputs/*.jpg
+outputs/スクリーンショット*.png
+
+# Local notes
+説明.txt

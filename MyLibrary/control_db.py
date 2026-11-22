@@ -1,3 +1,4 @@
+import os
 import mysql.connector
 import matplotlib.pyplot as plt
 
@@ -8,8 +9,8 @@ class DB_controller():
     def __init__(self):
         self.conn = mysql.connector.connect(
         host='localhost',
-        user='root',
-        password='mysqlkeito1340@',
+        user=os.environ.get('MYSQL_USER', 'root'),
+        password=os.environ.get('MYSQL_PASSWORD', ''),
         db='visitordb'
         )
         self.cursor = self.conn.cursor()
